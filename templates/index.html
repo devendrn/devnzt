@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="hero">
+    <h1 class="hero__title">{{ section.extra.hero_title }}</h1>
+    <h3 class="hero__about">{{ section.extra.hero_caption }}</h3>
+    {% if section.extra.hero_btns %}
+      <br><br>
+      {% for btn in section.extra.hero_btns %}
+        <a class="btn" href="{{ btn.url }}">{{ btn.name | safe }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  {% if section.extra.hero_message %}
+  <div style="display: flex; gap: 10px;">
+    <div class="card" style="flex:2;">
+      <h3>{{ section.extra.hero_message.title }}</h4>
+      <p>{{ section.extra.hero_message.content }}</p>
+      <div class="card__footer">
+        {% for social in section.extra.hero_message.socials %}
+        <a class="btn btn--popup" {% if social.url %}href="{{ social.url }}{% endif %}">
+          <i class="{{ social.fa_icon }}"></i>
+          <span>{{ social.alt }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="card card--animated-cog" style="flex:1;"> 
+      <i class="fa-solid fa-cog"></i>
+    </div>
+  </div>
+  {% endif %}
+
+
+  <h1>{{ section.extra.explore.title }}</h1>
+
+  <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 10px;">
+  {% for card in section.extra.explore.cards %}
+    <div class="explore-card" style="flex: {{ card.size }};">
+      <a {% if card.url %} href="{{ card.url }} {% endif %}"></a>
+      <img class = "explore-card__img" src="{{ card.image }}">
+      <div class = "explore-card__content">
+        <h3 class="explore-card__title">{{ card.title }}</h3>
+        <p class="explore-card__description">{{ card.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+  {{ section.content |safe }}
+</div>
+
+
+{% endblock content %}
+
