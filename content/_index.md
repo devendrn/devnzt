@@ -10,7 +10,7 @@ Nunc consequat malesuada sem at aliquet. Ut at lectus nunc. Vivamus accumsan dia
 """
 socials = [
     { fa_icon = "fa-brands fa-github", alt="devnzt", url="https://github.com/devendrn/devnzt/" },
-    { fa_icon = "fa-solid fa-hashtag", alt="Dapibus feugiat", url="/" },
+    { fa_icon = "fa-solid fa-hashtag", alt="Dapibus feugiat", url="" },
 ]
 
 [extra.explore]
@@ -20,14 +20,14 @@ title = "Fusce in justo"
 title = "Vivamus accumsan"
 description = "Sed non lectus condimentum, dapibus lectus quis, tempus purus."
 image = "https://picsum.photos/600/300"
-url = "/gallery"
+url = "gallery"
 size = 2
 
 [[extra.explore.cards]]
 title = "Quisque"
 description = "Fusce maximus dolor at mauris blandit iaculis."
 image = "https://picsum.photos/800/300"
-url = "/page"
+url = "page"
 size = 1
 
 +++

@@ -14,8 +14,8 @@ error404_title = "Egestas 404"
 error404_description = "Ed tristique ac massa vitae efficitur..."
 
 header_links = [
-    { name = "Justo", url = "/page" },
-    { name = "Lectus", url = "/gallery" },
+    { name = "Justo", url = "page" },
+    { name = "Lectus", url = "gallery" },
 ]
 
 footer_content = "Curabitur &copy; 8174 devnzt"
