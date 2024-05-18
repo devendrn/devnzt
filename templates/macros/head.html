@@ -2,7 +2,7 @@
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ config.author }}">
-  <meta name="description" content="{% if page %} page.description {% else %} section.description {% endif %}">
+<meta name="description" content="{% if page %} {{ page.description }} {% elif section %} {{ section.description }} {% endif %}">
   {% if config.extra.google_site_verification %}
     <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
   {% endif %}
