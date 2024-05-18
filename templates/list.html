@@ -13,7 +13,7 @@
   <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 10px;">
   {% for page in section.pages %}
     <div class="explore-card" style="flex: 1;">
-      <a href="{{ page.path }}"></a>
+      <a href="{{ page.path | trim_start_matches(pat="/") }}"></a>
       <img class = "explore-card__img" src="{{ page.extra.banner }}">
       <div class = "explore-card__content">
         <h3 class="explore-card__title">{{ page.title }}</h3>
