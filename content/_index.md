@@ -53,17 +53,18 @@ messagecard_socials = [
 Phasellus non vestibulum tortor. Sed finibus, augue eu bibendum imperdiet, lacus ante blandit ipsum, porttitor gravida magna magna in nisi. In hac habitasse platea dictumst. Duis venenatis volutpat sollicitudin. Vestibulum fermentum ante a risus efficitur porta. 
 
 <style>
+
 .card--animated-cog > i {
   animation: m 20s infinite linear;
 }
+
 @keyframes m {
   100% { transform: rotate(-360deg); }
 }
 
-
 @media screen and (max-width: 560px) {
   .card--animated-cog {
-    visibility: collapse;
+    display: none;
   }
 }
 
