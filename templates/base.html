@@ -5,7 +5,7 @@
 {% block vars %}
   {% set_global title = config.title %}
   {% if page.title %}
-    {% set_global title = title ~ "| " ~ page.title %}
+    {% set_global title = title ~ " | " ~ page.title %}
   {% endif %}
 {% endblock vars %}
 
