@@ -18,6 +18,9 @@
     {{ macros_head::resource() }}
     {{ macros_head::stylesheet() }}
     {{ macros_head::favicon() }}
+    {% if page.extra.use_twgl %}
+      {{ macros_head::twgl() }}
+    {% endif %}
   </head>
   <body>
     {{ macros_header::header() }}
