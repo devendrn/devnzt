@@ -1,0 +1,4 @@
+@forward "colorscheme";
+@use "function/all" as *;
+body { display: none; }
+:root { background-color: col0(bg-a); }
